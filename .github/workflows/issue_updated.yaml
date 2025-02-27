@@ -1,0 +1,22 @@
+name: Issue Updated
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  label_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add equipment when bought
+        if: ${{ github.event.label.name == 'Acheté' }}
+        run: ./scripts/update_equipment --buy ${{ github.event.issue.title }} ${{ github.event.issue.body }}
+
+      - name: Rent equipment
+        if: ${{ github.event.label.name == 'En pret' }}
+        run: ./scripts/update_equipment --rent ${{ github.event.issue.title }} ${{ github.event.issue.body }}
+    
+      - name: Return equipment
+        if: ${{ github.event.label.name == 'Matériel rendu' }}
+        run: ./scripts/update_equipment --return ${{ github.event.issue.title }} ${{ github.event.issue.body }}
+    
