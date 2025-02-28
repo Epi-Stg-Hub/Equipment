@@ -1,0 +1,27 @@
+{
+    "sections": {
+      "Equipement_VR": [],
+      "Embarqué": [
+        {
+          "equipement": "Arduino r3",
+          "id": 16,
+          "disponibilite": [
+            { "quantity": "12", "status": "available" },
+            { "quantity": "4", "status": "on loan" }
+          ]
+        },
+        {
+          "equipement": "Raspberry pi 4",
+          "id": 15,
+          "disponibilite": [
+            { "quantity": "1", "status": "available" },
+            { "quantity": "0", "status": "on loan" }
+          ]
+        }
+      ],
+      "Autre": []
+    },
+    "header": "# Equipment\n\nInventaire des équipements du hub\n",
+    "footer": "Have fun in Epitech Strasbourg"
+  }
+  
