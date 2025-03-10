@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore Application
 
       - name: Build the Blazor WASM app
         run: dotnet publish --configuration Release --output ./publish
