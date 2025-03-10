@@ -19,10 +19,10 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Restore dependencies
-        run: dotnet restore Application
+        run: dotnet restore Application/BlazorApp2.csproj
 
       - name: Build the Blazor WASM app
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish Application/BlazorApp2.csproj --configuration Release --output ./publish
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
