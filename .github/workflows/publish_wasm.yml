@@ -23,6 +23,9 @@ jobs:
 
       - name: Build the Blazor WASM app
         run: dotnet publish Application/BlazorApp2/BlazorApp2.csproj --configuration Release --output ./publish
+      
+      - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
+        run: sed -i 's/<base href="\/" \/>/<base href="\/ Epi-Stg-Hub\/Equipment\/" \/>/g' release/wwwroot/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -30,4 +33,4 @@ jobs:
           publish_dir: ./publish/wwwroot
           destination_dir: ""
           publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}s
+          github_token: ${{ secrets.GITHUB_TOKEN }}
