@@ -3,7 +3,7 @@ name: Deploy Blazor WASM to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - deploy
 
 jobs:
   build:
