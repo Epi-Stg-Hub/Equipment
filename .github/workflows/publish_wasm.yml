@@ -3,7 +3,7 @@ name: Deploy Blazor WASM to GitHub Pages
 on:
   push:
     branches:
-      - gh_pages
+      - gh-pages
 
 jobs:
   build:
@@ -28,6 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./publish/wwwroot
+          destination_dir: Pages
           publish_branch: gh-pages
           github_token:  ${{ secrets.GITHUB_TOKEN }}
 
