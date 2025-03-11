@@ -3,31 +3,31 @@ name: Deploy Blazor WASM to GitHub Pages
 on:
   push:
     branches:
-      - deploy  # Trigger deployment when changes are pushed to the 'deploy' branch
+      - deploy
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Run on the latest Ubuntu image
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Checkout the repository code
+        uses: actions/checkout@v3
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.x'  # Set up the .NET version
+          dotnet-version: '9.x'
 
       - name: Restore dependencies
-        run: dotnet restore Application/BlazorApp2/BlazorApp2.csproj  # Restore NuGet packages
+        run: dotnet restore Application/BlazorApp2/BlazorApp2.csproj
 
       - name: Build the Blazor WASM app
-        run: dotnet publish Application/BlazorApp2/BlazorApp2.csproj --configuration Release --output ./publish  # Build the app for production
+        run: dotnet publish Application/BlazorApp2/BlazorApp2.csproj --configuration Release --output ./publish
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./publish/wwwroot  # Ensure this path is correct for Blazor WASM output
-          destination_dir: ""  # Deploy to the root of the gh-pages branch
-          publish_branch: gh-pages  # Deploy to the gh-pages branch
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
+          publish_dir: ./publish/wwwroot
+          destination_dir: ""
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}s
