@@ -29,6 +29,5 @@ jobs:
         with:
           publish_dir: ./publish/wwwroot
           publish_branch: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
