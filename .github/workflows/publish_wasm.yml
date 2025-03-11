@@ -3,7 +3,7 @@ name: Deploy Blazor WASM to GitHub Pages
 on:
   push:
     branches:
-      - gh_pages
+      - gh-pages
 
 jobs:
   build:
@@ -19,16 +19,16 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore Application/BlazorApp2/BlazorApp2.csproj
 
       - name: Build the Blazor WASM app
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish Application/BlazorApp2/BlazorApp2.csproj --configuration Release --output ./publish
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: ./publish/wwwroot
           publish_dir: ./publish/wwwroot
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          destination_dir: Pages
+          publish_branch: gh-pages
+          github_token:  ${{ secrets.GITHUB_TOKEN }}
 
