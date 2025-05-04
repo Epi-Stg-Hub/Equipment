@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kaiwinta/Epitech/Tek2/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj": {}
+    "/home/kaiwinta/Epitech/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj": {}
   },
   "projects": {
-    "/home/kaiwinta/Epitech/Tek2/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj": {
+    "/home/kaiwinta/Epitech/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kaiwinta/Epitech/Tek2/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj",
+        "projectUniqueName": "/home/kaiwinta/Epitech/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj",
         "projectName": "BlazorApp2",
-        "projectPath": "/home/kaiwinta/Epitech/Tek2/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj",
+        "projectPath": "/home/kaiwinta/Epitech/Hub/Management/Equipment/Application/BlazorApp2/BlazorApp2.csproj",
         "packagesPath": "/home/kaiwinta/.nuget/packages/",
-        "outputPath": "/home/kaiwinta/Epitech/Tek2/Hub/Management/Equipment/Application/BlazorApp2/obj/",
+        "outputPath": "/home/kaiwinta/Epitech/Hub/Management/Equipment/Application/BlazorApp2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kaiwinta/.nuget/NuGet/NuGet.Config"
@@ -36,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -56,14 +56,18 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )",
+              "version": "[9.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )",
+              "version": "[9.0.2, )",
               "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.6.0, )"
             }
           },
           "imports": [
@@ -80,7 +84,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[9.0.0, 9.0.0]"
+              "version": "[9.0.2, 9.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -88,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kaiwinta/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kaiwinta/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
